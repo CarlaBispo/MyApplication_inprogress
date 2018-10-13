@@ -12,12 +12,34 @@
     tools:context=".PlayActivity">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Vitorias: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+
+        <TextView
+            android:id="@+id/tvNumeroVitorias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+
+
+    </LinearLayout>
     <TextView
         android:id="@+id/tvOpcoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
-        android:padding="20dp"
+        android:padding="5dp"
         android:text="@string/app_opcoes"
         android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
         android:textSize="30sp" />
@@ -119,14 +141,14 @@
         android:padding="3dp"
         android:text="@string/app_resultado"
         android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tvResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
-        android:text="@string/app_venceu"
+        tools:text="@string/app_venceu"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse" />
 
 
