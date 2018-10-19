@@ -5,6 +5,7 @@ import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_play.*
 import java.util.Random
 
@@ -19,8 +20,6 @@ class PlayActivity : AppCompatActivity() {
     private val totalVitoria = 0
     private val totalEmpate = 0
     private val totalDerrota = 0
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,29 +51,30 @@ class PlayActivity : AppCompatActivity() {
         player.start()
 
         val jogadaBot = numeroAleatorio!!.nextInt(3)+1
-        when(jogadaPlayer){
+        when(jogadaBot){
+
             AMARELO->{
-                ivJogadaBot!!.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.poke_azul))
+                ivJogadaBot!!.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.poke_amarelo))
                 when(jogadaPlayer){
-                    AZUL->venceu()
-                    AMARELO->empatou()
-                    ROSA->perdeu()
+                    AZUL -> venceu()
+                    AMARELO -> empatou()
+                    ROSA -> perdeu()
                 }
             }
             AZUL ->{
-                ivJogadaBot!!.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.poke_amarelo))
+                ivJogadaBot!!.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.poke_azul))
             when(jogadaPlayer){
-                AZUL->empatou()
-                AMARELO->perdeu()
-                ROSA->venceu()
+                AZUL -> empatou()
+                AMARELO -> perdeu()
+                ROSA -> venceu()
                 }
             }
             ROSA ->{
-                ivJogadaBot!!.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.poke_azul))
+                ivJogadaBot!!.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.poke_rosa))
                 when(jogadaPlayer){
-                    AZUL-> perdeu()
-                    AMARELO->venceu()
-                    ROSA->empatou()
+                    AZUL -> perdeu()
+                    AMARELO -> venceu()
+                    ROSA -> empatou()
                 }
             }
 
@@ -82,17 +82,17 @@ class PlayActivity : AppCompatActivity() {
     }
 
     private fun venceu(){
-        tvResultado!!.text=getString(R.string.app_venceu)
-        tvResultado!!.setTextColor(ContextCompat.getColor(this,R.color.vitoria))
+        tvResultado.text="Venceu"
+        tvResultado.setTextColor(ContextCompat.getColor(this,R.color.vitoria))
     }
 
     private fun perdeu(){
-        tvResultado!!.text=getString(R.string.app_perdeu)
-        tvResultado!!.setTextColor(ContextCompat.getColor(this,R.color.derrota))
+        tvResultado.text="Perdeu"
+        tvResultado.setTextColor(ContextCompat.getColor(this,R.color.derrota))
     }
 
     private fun empatou(){
-        tvResultado!!.text=getString(R.string.app_empate)
-        tvResultado!!.setTextColor(ContextCompat.getColor(this,R.color.empate))
+        tvResultado.text="Empatou"
+        tvResultado.setTextColor(ContextCompat.getColor(this,R.color.empate))
     }
 }
