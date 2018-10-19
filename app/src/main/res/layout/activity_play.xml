@@ -15,7 +15,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:layout_marginBottom="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,15 +26,47 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
 
         <TextView
-            android:id="@+id/tvNumeroVitorias"
+            android:id="@+id/tvVitorias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="0"
+            android:paddingRight="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Derrotas: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+
+        <TextView
+            android:id="@+id/tvDerrotas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="0"
+            android:paddingRight="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Empates: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+
+        <TextView
+            android:id="@+id/tvEmpates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
             android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
 
-
     </LinearLayout>
+
+
     <TextView
         android:id="@+id/tvOpcoes"
         android:layout_width="wrap_content"

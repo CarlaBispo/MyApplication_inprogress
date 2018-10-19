@@ -1,5 +1,6 @@
 package com.example.corem.myapplication
 
+import android.content.Intent
 import android.media.JetPlayer
 import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
@@ -13,13 +14,13 @@ class PlayActivity : AppCompatActivity() {
 
     private var numeroAleatorio: Random? = null
 
+    var vitorias = 0
+    var vidas = 3
+
     private val AMARELO = 1
     private val AZUL = 2
     private val ROSA = 3
 
-    private val totalVitoria = 0
-    private val totalEmpate = 0
-    private val totalDerrota = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +43,14 @@ class PlayActivity : AppCompatActivity() {
         btRosa.setOnClickListener{
             ivJogadaPlayer!!.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.poke_rosa))
             realizarJogada(ROSA)
+        }
+    }
+
+    private fun validaVidas() {
+        if (vidas == 0){
+            val intent = Intent(this, GameOverActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -87,6 +96,8 @@ class PlayActivity : AppCompatActivity() {
     }
 
     private fun perdeu(){
+        vidas--
+        validaVidas()
         tvResultado.text="Perdeu"
         tvResultado.setTextColor(ContextCompat.getColor(this,R.color.derrota))
     }

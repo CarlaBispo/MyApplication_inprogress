@@ -17,8 +17,8 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/p_logo"
-        android:paddingTop="50dp"
-        android:layout_marginTop="30dp"
+        android:paddingTop="70dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="30dp"/>
 
     <Button
@@ -32,6 +32,7 @@
         android:fontFamily="casual"
         android:onClick="play"
         android:text="@string/app_play"
+        android:layout_marginTop="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         tools:text="PLAY" />
 
