@@ -30,4 +30,11 @@ class MenuActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    fun quit(view: View){
+        val quit = btQuit
+        btQuit.setOnClickListener {
+            finish()
+        }
+    }
 }
