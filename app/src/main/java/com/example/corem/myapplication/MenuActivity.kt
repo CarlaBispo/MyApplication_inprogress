@@ -23,6 +23,13 @@ class MenuActivity : AppCompatActivity() {
         finish()
     }
 
+    fun score(view:View){
+        val score =  btScore
+        val intent = Intent(this, ScoreActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
 
     fun about(view:View){
         val about =  btAbout

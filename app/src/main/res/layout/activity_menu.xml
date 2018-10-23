@@ -45,6 +45,7 @@
         android:layout_gravity="center"
         android:fontFamily="casual"
         android:text="SCORE"
+        android:onClick="score"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse" />
 
     <Button

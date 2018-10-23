@@ -15,6 +15,7 @@ class PlayActivity : AppCompatActivity() {
     private var numeroAleatorio: Random? = null
 
     var vitorias = 0
+    var empate = 0
     var vidas = 3
 
     private val AMARELO = 1
@@ -52,6 +53,8 @@ class PlayActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+
     }
 
     private fun realizarJogada(jogadaPlayer: Int){
@@ -91,6 +94,7 @@ class PlayActivity : AppCompatActivity() {
     }
 
     private fun venceu(){
+        vitorias++
         tvResultado.text="Venceu"
         tvResultado.setTextColor(ContextCompat.getColor(this,R.color.vitoria))
     }
@@ -103,6 +107,7 @@ class PlayActivity : AppCompatActivity() {
     }
 
     private fun empatou(){
+        empate++
         tvResultado.text="Empatou"
         tvResultado.setTextColor(ContextCompat.getColor(this,R.color.empate))
     }
