@@ -32,6 +32,7 @@
         android:cropToPadding="true"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/poke_azul" />
+
     <ImageView
         android:layout_width="300dp"
         android:layout_height="1dp"

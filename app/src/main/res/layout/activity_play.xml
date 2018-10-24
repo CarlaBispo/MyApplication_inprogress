@@ -11,12 +11,19 @@
     android:theme="@style/AppTheme"
     tools:context=".PlayActivity">
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="1dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="50dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -185,7 +192,12 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse" />
 
 
-
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="1dp"/>
 
 
 

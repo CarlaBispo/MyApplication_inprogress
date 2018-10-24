@@ -51,10 +51,9 @@ class PlayActivity : AppCompatActivity() {
         if (vidas == 0){
             val intent = Intent(this, GameOverActivity::class.java)
             startActivity(intent)
+            tvVitorias.toString()
             finish()
         }
-
-
     }
 
     private fun realizarJogada(jogadaPlayer: Int){
