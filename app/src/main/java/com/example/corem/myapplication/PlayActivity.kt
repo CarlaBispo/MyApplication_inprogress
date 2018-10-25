@@ -14,8 +14,8 @@ class PlayActivity : AppCompatActivity() {
 
     private var numeroAleatorio: Random? = null
 
-    var vitorias = 0
-    var empate = 0
+    var vitorias:Int = 0
+    var empate:Int = 0
     var vidas = 3
 
     private val AMARELO = 1
@@ -51,7 +51,6 @@ class PlayActivity : AppCompatActivity() {
         if (vidas == 0){
             val intent = Intent(this, GameOverActivity::class.java)
             startActivity(intent)
-            tvVitorias.toString()
             finish()
         }
     }
@@ -96,6 +95,7 @@ class PlayActivity : AppCompatActivity() {
         vitorias++
         tvResultado.text="Venceu"
         tvResultado.setTextColor(ContextCompat.getColor(this,R.color.vitoria))
+        tvVitorias!!.text = vitorias.toString()
     }
 
     private fun perdeu(){
@@ -103,11 +103,13 @@ class PlayActivity : AppCompatActivity() {
         validaVidas()
         tvResultado.text="Perdeu"
         tvResultado.setTextColor(ContextCompat.getColor(this,R.color.derrota))
+        tvDerrotas!!.text = vidas.toString()
     }
 
     private fun empatou(){
         empate++
         tvResultado.text="Empatou"
         tvResultado.setTextColor(ContextCompat.getColor(this,R.color.empate))
+        tvEmpates!!.text = empate.toString()
     }
 }
