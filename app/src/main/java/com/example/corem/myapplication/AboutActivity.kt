@@ -21,4 +21,14 @@ class AboutActivity : AppCompatActivity() {
         finish()
     }
 
+    //
+    /*
+     fun voltar(view: View) {
+        val ir = btVoltar
+        val intent = Intent(this, MenuActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+     */
+
 }

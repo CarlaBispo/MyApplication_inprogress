@@ -192,13 +192,28 @@
         tools:text="@string/app_venceu"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse" />
 
-
     <ImageView
         android:layout_width="300dp"
         android:layout_height="1dp"
         android:background="@color/colorAccent"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="1dp"/>
+
+    <Button
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+
+
+        android:id="@+id/btVoltar"
+        android:layout_gravity="center"
+        android:background="@color/bg_splash"
+        android:contentDescription="*** voltar ***"
+        android:fontFamily="casual"
+        android:onClick="voltar"
+        android:text="@string/app_voltar"
+        android:layout_marginTop="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        tools:text="*** voltar ***" />
 
 
 

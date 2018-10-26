@@ -9,4 +9,11 @@ class ScoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_score)
     }
+
+    /*
+    val retrofit = Retrofit.Builder()
+            .baseUrl("https://gamestjd.herokuapp.com")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    */
 }

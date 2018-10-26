@@ -8,7 +8,14 @@
     android:orientation="vertical"
     android:background="@color/bg_splash">
 
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text=": : ---------*-------- : :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
 
 
     <ImageView
@@ -17,9 +24,9 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/p_logo"
-        android:paddingTop="70dp"
+        android:paddingTop="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginBottom="10dp"/>
 
     <Button
         android:id="@+id/btPlay"
@@ -32,7 +39,7 @@
         android:fontFamily="casual"
         android:onClick="play"
         android:text="@string/app_play"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         tools:text="PLAY" />
 
@@ -69,14 +76,21 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="QUIT"
+        android:fontFamily="casual"
         android:onClick="quit"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse" />
+        android:text="QUIT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+        android:textSize="18sp" />
 
 
-
-
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text=": : ---------*-------- : :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
 
 
 
